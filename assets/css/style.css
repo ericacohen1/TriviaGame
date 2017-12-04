@@ -1,0 +1,20 @@
+body {
+    background-image: url("https://n6-img-fp.akamaized.net/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg?size=338&ext=jpg");
+    font-size: 25px;
+    /* position: relative; */
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto; 
+}
+#startgame {
+    font-size: 50px;
+   
+   
+    
+}
+
+#gameover {
+    font-size: 50px;
+}
