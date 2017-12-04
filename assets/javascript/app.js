@@ -4,7 +4,9 @@ $(document).ready(function(){
 var correctAnswers = 0;
 var wrongAnswers = 0;
 var unanswered = 0;
-var time = 60;    
+var time = 60;
+
+var intervalId // test
 
 //hiding questions and results until the game begins
 $("#duringgame").hide();
@@ -15,7 +17,7 @@ $("#presstostart").on("click", function() {
     $("#startgame").hide();
     $("#duringgame").show();
     $("#gameover").hide();
-    setInterval(userInterfaceCountdown, 100);
+    intervalId = setInterval(userInterfaceCountdown, 1000);
 });
 
 // countdown timer for 60 seconds once user starts the game
@@ -39,8 +41,10 @@ $("#completed").on("click", function() {
     gameFinished();
 });
 
-// check resutls and display to DOM
+// check results and display to DOM
 function gameFinished() {
+    
+    clearInterval(intervalId);
 
     var q1 = $("input:radio[name=q1]:checked").val();
     var q2 = $("input:radio[name=q2]:checked").val();

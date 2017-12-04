@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Trivia Game</title>
 </head>
 
 <body>
+        
     <div class="container">
     <div id="startgame">
-        <div>College Field Hockey Trivia!</div>
+        <div class="title">College Field Hockey Trivia!</div> <br>
+        <img src=https://101clipart.com/wp-content/uploads/04/Field%20Hockey%20Clipart%2030.jpg width=400px> 
+        <br>
         <button id="presstostart">Start</button>
     </div>
 
     <div id="duringgame">
         <div>
-            <div>College Field Hokcey Trivia</div>
+            <div class="title">College Field Hokcey Trivia</div>
             <div>Time Remaining: <span id="countitdown">60 seconds</span></div>
         </div>
         <div>
@@ -87,7 +90,7 @@
     </div>
 
     <div id="gameover">
-        <div>College Field Hockey Trivia</div>
+        <div class="title">College Field Hockey Trivia</div>
         <div>Correct Answers: <span id="right"></span></div>
         <div>Incorrect Answers: <span id="wrong"></span></div>
         <div>Unanswered: <span id="timeexpired"></span></div>

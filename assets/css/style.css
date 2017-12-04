@@ -1,20 +1,23 @@
 body {
     background-image: url("https://n6-img-fp.akamaized.net/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg?size=338&ext=jpg");
     font-size: 25px;
-    /* position: relative; */
+    /* This made the image full screen */
+    background-size: cover;
 }
 
 .container {
     width: 960px;
     margin: 0 auto; 
+    text-align: center;
 }
 #startgame {
-    font-size: 50px;
-   
-   
-    
+    font-size: 50px;  
 }
 
 #gameover {
     font-size: 50px;
+}
+
+button {
+    margin-top: 10px;
 }
