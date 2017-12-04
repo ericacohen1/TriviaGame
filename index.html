@@ -6,96 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Trivia Game</title>
 </head>
 
 <body>
-        
+
     <div class="container">
-    <div id="startgame">
-        <div class="title">College Field Hockey Trivia!</div> <br>
-        <img src=https://101clipart.com/wp-content/uploads/04/Field%20Hockey%20Clipart%2030.jpg width=400px> 
-        <br>
-        <button id="presstostart">Start</button>
-    </div>
-
-    <div id="duringgame">
-        <div>
-            <div class="title">College Field Hokcey Trivia</div>
-            <div>Time Remaining: <span id="countitdown">60 seconds</span></div>
-        </div>
-        <div>
-            <div>What is the ideal playing surface?</div>
-            <!-- grass, field turf, astroturf, hockey rink -->
-            <input type="radio" name="q1" value="grass">grass
-            <input type="radio" name="q1" value="field turf">field turf
-            <input type="radio" name="q1" value="astroturf">astroturf
-            <input type="radio" name="q1" value="hockey rink">hockey rink
-
-            <div>How many players are on the field at one time?</div>
-            <input type="radio" name="q2" value="9">9
-            <input type="radio" name="q2" value="10">10
-            <input type="radio" name="q2" value="11">11
-            <input type="radio" name="q2" value="12">12
-
-            <div>What happens if the score is tied after overtime?</div>
-            <!-- game ends in a tie, strokes, shootouts, what's field hockey -->
-            <input type="radio" name="q3" value="game ends in a tie">game ends in a tie
-            <input type="radio" name="q3" value="shootouts">shootouts
-            <input type="radio" name="q3" value="strokes">strokes
-            <input type="radio" name="q3" value="what's field hockey">what's field hokcey
-
-
-            <div>How many division one field hokcey schools are there in CA?</div>
-            <!-- 4, 8, 12, 16 -->
-            <input type="radio" name="q4" value="4">4
-            <input type="radio" name="q4" value="8">8
-            <input type="radio" name="q4" value="12">12
-            <input type="radio" name="q4" value="16">16
-
-            <div>How many division two and three schools are there in CA?</div>
-            <!-- 0, 15, 30, 50 -->
-            <input type="radio" name="q5" value="0">0
-            <input type="radio" name="q5" value="15">15
-            <input type="radio" name="q5" value="30">30
-            <input type="radio" name="q5" value="50">50
-
-            <div>How long is the game?</div>
-            <!-- 50 minutes, 60 minutes, 65, minutes, 70 minutes -->
-            <input type="radio" name="q6" value="50 minutes">50 minutes
-            <input type="radio" name="q6" value="60 minutes">60 minutes
-            <input type="radio" name="q6" value="65 minutes">65 minutes
-            <input type="radio" name="q6" value="70 minutes">70 minutes
-
-            <div>During what season does field hockey take place?</div>
-            <!-- fall, winter, spring, summer -->
-            <input type="radio" name="q7" value="fall">fall
-            <input type="radio" name="q7" value="winter">winter
-            <input type="radio" name="q7" value="spring">spring
-            <input type="radio" name="q7" value="summer">summer
-
-            <div>How many players are there in a defensive short corner unit (including the goalkeeper)?</div>
-            <input type="radio" name="q8" value="3">3
-            <input type="radio" name="q8" value="4">4
-            <input type="radio" name="q8" value="5">5
-            <input type="radio" name="q8" value="6">6
+        <div id="startgame">
+            <div class="title">College Field Hockey Trivia!</div>
+            <img src=https://101clipart.com/wp-content/uploads/04/Field%20Hockey%20Clipart%2030.jpg width=400px>
             <br>
+            <button id="presstostart">Start</button>
+        </div>
 
-            <button id="completed">Finish</button>
+        <div id="duringgame">
+            <div>
+                <div class="title">College Field Hockey Trivia</div>
+                <div id="timer">Time Remaining:
+                    <span id="countitdown">60 seconds</span>
+                </div>
+            </div>
+            <div>
+                <div class="wrapper">
+                    <div>1. What is the ideal playing surface?</div>
+                    <!-- grass, field turf, astroturf, hockey rink -->
+                    <input type="radio" name="q1" value="grass">grass
+                    <input type="radio" name="q1" value="field turf">field turf
+                    <input type="radio" name="q1" value="astroturf">astroturf
+                    <input type="radio" name="q1" value="hockey rink">hockey rink
 
+                    <div>2. How many players are on the field at one time?</div>
+                    <input type="radio" name="q2" value="9">9
+                    <input type="radio" name="q2" value="10">10
+                    <input type="radio" name="q2" value="11">11
+                    <input type="radio" name="q2" value="12">12
+
+                    <div>3. What happens if the score is tied after overtime?</div>
+                    <!-- game ends in a tie, strokes, shootouts, what's field hockey -->
+                    <input type="radio" name="q3" value="game ends in a tie">game ends in a tie
+                    <input type="radio" name="q3" value="shootouts">shootouts
+                    <input type="radio" name="q3" value="strokes">strokes
+                    <input type="radio" name="q3" value="what's field hockey">what's field hokcey
+
+
+                    <div>4. How many division one field hockey schools are there in CA?</div>
+                    <!-- 4, 8, 12, 16 -->
+                    <input type="radio" name="q4" value="4">4
+                    <input type="radio" name="q4" value="8">8
+                    <input type="radio" name="q4" value="12">12
+                    <input type="radio" name="q4" value="16">16
+
+                    <div>5. How many division two and three schools are there in CA?</div>
+                    <!-- 0, 15, 30, 50 -->
+                    <input type="radio" name="q5" value="0">0
+                    <input type="radio" name="q5" value="15">15
+                    <input type="radio" name="q5" value="30">30
+                    <input type="radio" name="q5" value="50">50
+
+                    <div>6. How long is the game?</div>
+                    <!-- 50 minutes, 60 minutes, 65, minutes, 70 minutes -->
+                    <input type="radio" name="q6" value="50 minutes">50 minutes
+                    <input type="radio" name="q6" value="60 minutes">60 minutes
+                    <input type="radio" name="q6" value="65 minutes">65 minutes
+                    <input type="radio" name="q6" value="70 minutes">70 minutes
+
+                    <div>7. During what season does field hockey take place?</div>
+                    <!-- fall, winter, spring, summer -->
+                    <input type="radio" name="q7" value="fall">fall
+                    <input type="radio" name="q7" value="winter">winter
+                    <input type="radio" name="q7" value="spring">spring
+                    <input type="radio" name="q7" value="summer">summer
+
+                    <div>8. How many players are there in a defensive short corner unit (including the goalkeeper)?</div>
+                    <input type="radio" name="q8" value="3">3
+                    <input type="radio" name="q8" value="4">4
+                    <input type="radio" name="q8" value="5">5
+                    <input type="radio" name="q8" value="6">6
+                    <br>
+                </div>
+                <button id="completed">Finish</button>
+
+            </div>
+        </div>
+
+        <div id="gameover">
+            <div class="title">College Field Hockey Trivia</div>
+            <div id="all-results">
+            <div>Correct Answers:
+                <span id="right"></span>
+            </div>
+            <div>Incorrect Answers:
+                <span id="wrong"></span>
+            </div>
+            <div>Unanswered:
+                <span id="timeexpired"></span>
+            </div>
+            </div>
         </div>
     </div>
-
-    <div id="gameover">
-        <div class="title">College Field Hockey Trivia</div>
-        <div>Correct Answers: <span id="right"></span></div>
-        <div>Incorrect Answers: <span id="wrong"></span></div>
-        <div>Unanswered: <span id="timeexpired"></span></div>
-    </div>
-</div>
     <script src="assets/javascript/app.js"></script>
 
 </body>
